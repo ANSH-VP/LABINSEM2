@@ -1,0 +1,29 @@
+import { useState } from "react";
+
+function App() {
+  const [page, setPage] = useState("booking");
+
+  return (
+    <div style={{ textAlign: "center", marginTop: "100px" }}>
+
+      {page === "booking" ? (
+        <>
+          <h1>Booking Page</h1>
+
+          <button onClick={() => setPage("confirmation")}>
+            Book Now
+          </button>
+        </>
+      ) : (
+        <>
+          <h1>Booking Confirmed!</h1>
+
+          <p>Your booking is successful.</p>
+        </>
+      )}
+
+    </div>
+  );
+}
+
+export default App;
